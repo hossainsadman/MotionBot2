@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 /**
@@ -27,4 +28,17 @@ public class RobotMap {
     // public static int rangefinderModule = 1;
 
     public static final VictorSPX motor = new VictorSPX(7);
+    public static final VictorSPX rvictor = new VictorSPX(0);
+    public static final TalonSRX rtalon1 = new TalonSRX(1);
+    public static final TalonSRX rtalon2 = new TalonSRX(2);
+    public static final VictorSPX lvictor = new VictorSPX(3);
+    public static final TalonSRX ltalon1 = new TalonSRX(4);
+    public static final TalonSRX ltalon2 = new TalonSRX(5);
+
+    public static void init() {
+        rtalon1.follow(rvictor);
+        rtalon2.follow(rvictor);
+        ltalon1.follow(lvictor);
+        ltalon2.follow(lvictor);
+    }
 }
