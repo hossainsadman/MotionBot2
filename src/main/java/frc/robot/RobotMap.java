@@ -7,6 +7,7 @@
 
 package frc.robot;
 
+import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
@@ -40,5 +41,12 @@ public class RobotMap {
         rtalon2.follow(rvictor);
         ltalon1.follow(lvictor);
         ltalon2.follow(lvictor);
+
+        RobotMap.lvictor.setNeutralMode(NeutralMode.Brake);
+        RobotMap.rvictor.setNeutralMode(NeutralMode.Brake);
+        RobotMap.ltalon1.setNeutralMode(NeutralMode.Brake);
+        RobotMap.ltalon2.setNeutralMode(NeutralMode.Brake);
+        RobotMap.rtalon1.setNeutralMode(NeutralMode.Brake);
+        RobotMap.rtalon2.setNeutralMode(NeutralMode.Brake);
     }
 }
