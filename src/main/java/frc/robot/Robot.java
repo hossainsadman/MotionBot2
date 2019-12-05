@@ -7,11 +7,8 @@
 
 package frc.robot;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
-
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import frc.robot.commands.TurnInPlace;
 import frc.robot.subsystems.Drivetrain;
 
 /**

@@ -38,6 +38,8 @@ public class TeleopDrive extends Command {
 
         y = -y;
 
+        x = Math.copySign(x * x, x);
+        y = Math.copySign(y * y, y);
 
         Robot.drivetrain.setOutput(y - x, y + x);
     }
