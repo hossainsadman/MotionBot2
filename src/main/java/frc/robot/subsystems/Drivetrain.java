@@ -8,10 +8,10 @@
 package frc.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.NeutralMode;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
+import frc.robot.commands.TeleopDrive;
 
 public class Drivetrain extends Subsystem {
     // Put methods for controlling this subsystem
@@ -19,6 +19,7 @@ public class Drivetrain extends Subsystem {
 
     @Override
     public void initDefaultCommand() {
+        setDefaultCommand(new TeleopDrive());
     }
 
     public void setOutput(double left, double right) {

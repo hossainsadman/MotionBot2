@@ -78,9 +78,9 @@ public class OI {
         public static final int POV_CENTER = -1;
     }
 
+	public static final XboxController controller = new XboxController(0);
+
     public OI() {
-        XboxController controller = new XboxController(0);
-        JoystickButton b = new JoystickButton(controller, ControllerMap.BUTTON_A);
-        b.whileHeld(new TurnInPlace());
+
     }
 }
